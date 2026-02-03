@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tugas css dasar</title>
+
+<style>
+* { box-sizing: border-box; }
+body { font-family:cursive; background : #6f6f6f; margin:30px; }
+
+.row { display:flex; flex-wrap:wrap; }
+
+.col-3 { width:25%; }
+.col-4 { width:33.33%; }
+.col-6 { width:50%; }
+
+.box {
+    padding:15px;
+    color:rgb(0, 0, 0);
+    font-size:20px;
+}
+
+.merah { background:#9479ff; }
+.biru  { background:#1ac8ef; }
+.hijau { background:#3dd63d; }
+
+@media(max-width:768px){
+  .col-3 { width:50%; }
+  .col-4, .col-6 { width:100%; }
+}
+
+@media(max-width:480px){
+  .col-3, .col-4, .col-6 { width:100%; }
+}
+</style>
+
+</head>
+<body>
+
+<h3>Grid 4</h3>
+<div class="row">
+  <div class="col-3 box merah">Satu layar dibagi menjadi 4 bagian, jadi tiap kotak berukuran 3</div>
+  <div class="col-3 box biru">Satu layar dibagi menjadi 4 bagian, jadi tiap kotak berukuran 3</div>
+  <div class="col-3 box hijau">Satu layar dibagi menjadi 4 bagian, jadi tiap kotak berukuran 3</div>
+  <div class="col-3 box merah">Satu layar dibagi menjadi 4 bagian, jadi tiap kotak berukuran 3</div>
+</div>
+
+<h3>Grid 3</h3>
+<div class="row">
+  <div class="col-4 box hijau">Satu layar dibagi menjadi 3 bagian, tiap bagian berukuran 4</div>
+  <div class="col-4 box merah">Satu layar dibagi menjadi 3 bagian, tiap bagian berukuran 4</div>
+  <div class="col-4 box biru">Satu layar dibagi menjadi 3 bagian, tiap bagian berukuran 4</div>
+</div>
+
+<h3>Grid 2</h3>
+<div class="row">
+  <div class="col-6 box hijau">Satu layar dibagi menjadi 2 bagian, tiap bagian berukuran 6</div>
+  <div class="col-6 box merah">Satu layar dibagi menjadi 2 bagian, tiap bagian berukuran 6</div>
+</div>
+
+</body>
+</html>

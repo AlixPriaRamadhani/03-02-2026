@@ -1,0 +1,59 @@
+/* RESET */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 20px;
+    background-image: url(https://commons.wikimedia.org/wiki/File:Pemandangan_Alam.jpg);
+}
+
+/* JUDUL */
+h3 {
+    margin: 20px 0 10px;
+}
+
+/* GRID DASAR */
+.row {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* KOLOM */
+[class*="col-"] {
+    padding: 15px;
+    color: rgb(0, 0, 0);              
+    font-size: 20px;
+}
+
+/* GRID 12 SYSTEM (DESKTOP) */
+.col-3 { width: 25%; }
+.col-4 { width: 33.33%; }
+.col-6 { width: 50%; }
+
+/* WARNA BACKGROUND (PERSIS MODUL) */
+.ungu { background-color: #9479ff; }   
+.biru  { background-color: #1ac8ef; }   
+.hijau { background-color: #3dd63d; }   
+
+/* ===== TABLET ===== */
+@media only screen and (max-width: 768px) {
+    .col-3 {
+        width: 50%;     /* Grid 4 jadi 2x2 */
+    }
+    .col-4,
+    .col-6 {
+        width: 100%;    /* Grid 3 & 2 turun ke bawah */
+    }
+}
+
+/* ===== MOBILE ===== */
+@media only screen and (max-width: 480px) {
+    .col-3,
+    .col-4,
+    .col-6 {
+        width: 100%;    /* Semua 1 kolom */
+    }
+}
